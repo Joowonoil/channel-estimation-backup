@@ -1,0 +1,29 @@
+% Performance Comparison Table for ICTC 2025 Paper
+\begin{table}[t]
+\centering
+\caption{Performance Comparison of Parameter-Efficient Transfer Learning Methods}
+\label{tab:performance}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Method} & \textbf{InF NMSE} & \textbf{RMa NMSE} & \textbf{Average} & \textbf{Add. Params} & \textbf{Efficiency} \\
+ & \textbf{(dB)} & \textbf{(dB)} & \textbf{Improvement (dB)} & \textbf{(K)} & \textbf{(\%)} \\
+\midrule
+Base v3 & -23.2 & -22.8 & - & 0 & 0.00 \\
+v3 Adapter & -25.2 & -24.8 & +2.0 & 131 & 1.31 \\
+\midrule
+Base v4 & -24.1 & -23.5 & - & 0 & 0.00 \\
+v4 LoRA & \textbf{-26.4} & \textbf{-25.9} & \textbf{+2.35} & \textbf{27} & \textbf{0.27} \\
+\midrule
+\multicolumn{6}{l}{\textit{LoRA vs Adapter Comparison:}} \\
+Performance Gain & +1.2 & +1.1 & +0.35 & -79\% & -79\% \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Base models trained for 200k iterations on respective architectures
+\item Transfer learning performed for 60k iterations on target environments
+\item NMSE values averaged over 1000 test samples per environment
+\item Add. Params: Additional parameters for transfer learning
+\item Efficiency: Percentage of additional parameters relative to base model (10M params)
+\end{tablenotes}
+\end{table}

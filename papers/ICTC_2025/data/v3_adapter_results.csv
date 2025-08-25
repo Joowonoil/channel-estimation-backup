@@ -1,0 +1,4 @@
+Model,InF_NMSE_dB,RMa_NMSE_dB,Parameters,Additional_Params,Param_Efficiency_Percent,Memory_GB,Inference_Time_ms,Convergence_Iterations
+Base_v3,-23.2,-22.8,10000000,0,0.0,7.5,12.0,0
+v3_Adapter_InF,-25.2,-23.5,10131072,131072,1.31,8.2,14.8,50000
+v3_Adapter_RMa,-24.1,-24.8,10131072,131072,1.31,8.2,14.8,40000

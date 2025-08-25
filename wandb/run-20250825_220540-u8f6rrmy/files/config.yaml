@@ -1,0 +1,144 @@
+_wandb:
+    value:
+        cli_version: 0.21.1
+        e:
+            5gihyzergsqfeh5wm2qifow5heca7yuc:
+                codePath: engine_v3.py
+                codePathLocal: engine_v3.py
+                cpu_count: 10
+                cpu_count_logical: 20
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "2000188076032"
+                        used: "20113195008"
+                email: joowonoil@g.skku.edu
+                executable: D:\DNN_channel_estimation_training\venv\Scripts\python.exe
+                git:
+                    commit: 8c53d4e581f665e3cc447df239f4a25c268f3699
+                    remote: https://github.com/Joowonoil/channel-estimation.git
+                gpu: NVIDIA GeForce RTX 5070 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      cudaCores: 4608
+                      memoryTotal: "8546942976"
+                      name: NVIDIA GeForce RTX 5070 Laptop GPU
+                      uuid: GPU-b6a34463-ec72-0d6f-58ce-841097f9fe19
+                host: Ramster
+                memory:
+                    total: "33412730880"
+                os: Windows-10-10.0.26100-SP0
+                program: D:\DNN_channel_estimation_training\engine_v3.py
+                python: CPython 3.11.9
+                root: D:\DNN_channel_estimation_training
+                startedAt: "2025-08-25T13:05:40.052867Z"
+                writerId: 5gihyzergsqfeh5wm2qifow5heca7yuc
+        m: []
+        python_version: 3.11.9
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+            "3":
+                - 16
+            "4": 3.11.9
+            "5": 0.21.1
+            "6": 4.55.4
+            "8":
+                - 3
+            "12": 0.21.1
+            "13": windows-amd64
+auto_upload:
+    value:
+        enabled: false
+        include_config: true
+        include_training_log: true
+        repository: https://github.com/Joowonoil/vastai_trained_model.git
+ch_estimation:
+    value:
+        adapter:
+            bottleneck_dim: 64
+            dropout: 0.1
+            enabled: false
+        cond:
+            in_channels: 2
+            length: 3072
+            step_size: 12
+            steps_per_token: 1
+        transformer:
+            activation: relu
+            channels: 2
+            d_model: 128
+            dim_feedforward: 1024
+            dropout: 0.1
+            length: 3072
+            n_head: 8
+            n_token: 256
+            num_layers: 4
+dataset:
+    value:
+        batch_size: 32
+        carrier_freq: 28
+        channel_type:
+            - InF_Los
+            - InF_Nlos
+            - InH_Los
+            - InH_Nlos
+            - RMa_Los
+            - RMa_Nlos
+            - UMa_Los
+            - UMa_Nlos
+            - UMi_Los
+            - UMi_Nlos
+        cp_length: 590
+        distance_range:
+            - 10
+            - 500
+        fft_size: 4096
+        is_channel: true
+        is_noise: true
+        is_phase_noise: false
+        max_random_tap_delay_cp_proportion: 0.2
+        mod_order: 64
+        noise_spectral_density: -174
+        num_guard_subcarriers: 1024
+        num_symbol: 14
+        num_workers: 0
+        ref_conf_dict:
+            dmrs:
+                - 0
+                - 3072
+                - 6
+        rnd_seed: 0
+        subcarrier_spacing: 120
+        transmit_power: 30
+training:
+    value:
+        ch_loss_weight: 1
+        device: cuda:0
+        evaluation_batch_size: 4
+        evaluation_step: 5000
+        load_model_path: ""
+        logging_step: 100
+        lr: 0.0001
+        max_norm: 1
+        model_save_step: 10000
+        momentum: 0.9
+        num_iter: 200000
+        num_warmup_steps: 1000
+        optimizer: Adam
+        pn_train_start_iter: 50000
+        pretrained_model_name: ""
+        saved_model_name: Large_estimator_v3_base_final
+        use_scheduler: true
+        use_wandb: true
+        wandb_proj: DNN_channel_estimation_v3_base
+        weight_decay: 1e-06

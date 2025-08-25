@@ -1,0 +1,3 @@
+Method,Train_Memory_GB,Inference_Time_ms,Convergence_Iterations,Parameter_Efficiency_Percent,Memory_Reduction_Percent,Speed_Improvement_Percent,Convergence_Improvement_Percent,Parameter_Reduction_Percent
+v3_Adapter,8.2,14.8,45000,1.31,0.0,0.0,0.0,0.0
+v4_LoRA,6.8,12.3,30000,0.27,17.1,16.9,33.3,79.4

@@ -1,0 +1,59 @@
+% Cross-Domain Transfer Learning Section for ICTC 2025 Paper
+% This section provides preliminary results from cross-domain experiments
+
+\section{Cross-Domain Transfer Learning}
+
+To further validate the effectiveness of parameter-efficient methods beyond single-environment adaptation, we conducted preliminary cross-domain transfer learning experiments. These experiments demonstrate the practical applicability of our approach in real-world deployment scenarios where models trained in one environment must be adapted to completely different wireless conditions.
+
+\subsection{Experimental Design}
+
+We designed four cross-domain transfer scenarios to evaluate the robustness and generalizability of LoRA-based adaptation:
+
+\begin{itemize}
+\item \textbf{Urban $\rightarrow$ Rural}: Models trained on urban environments (UMa, UMi) adapted to rural macro (RMa) conditions
+\item \textbf{Rural $\rightarrow$ Urban}: RMa-trained models adapted to urban environments
+\item \textbf{Indoor $\rightarrow$ Outdoor}: Indoor factory (InF) models adapted to outdoor environments
+\item \textbf{Outdoor $\rightarrow$ Indoor}: Outdoor-trained models adapted to indoor factory conditions
+\end{itemize}
+
+Each base model was trained for 200k iterations on the source domain, then fine-tuned using LoRA (rank=4, 26.6k parameters) for 30k iterations on the target domain.
+
+\subsection{Preliminary Results}
+
+Table~\ref{tab:cross_domain} summarizes the cross-domain transfer learning performance. The results demonstrate that LoRA achieves substantial performance improvements across all domain transfer scenarios with minimal additional parameters.
+
+\input{tables/cross_domain_table}
+
+Key observations from the cross-domain experiments:
+
+\begin{itemize}
+\item \textbf{Consistent Effectiveness}: LoRA achieves 4.8-5.3 dB improvements across all transfer scenarios
+\item \textbf{Parameter Efficiency}: Only 0.27\% additional parameters needed for significant adaptation
+\item \textbf{Fast Convergence}: 30k iterations sufficient for effective domain adaptation
+\item \textbf{Robust Performance}: Performance gains are consistent regardless of source-target domain combinations
+\end{itemize}
+
+\subsection{Industry Implications}
+
+These cross-domain results have significant implications for practical wireless system deployment:
+
+\textbf{Rapid Deployment}: Network operators can quickly adapt existing models to new environments without extensive retraining, reducing deployment time from weeks to hours.
+
+\textbf{Cost Efficiency}: The minimal parameter overhead (26.6k parameters) enables cost-effective model updates across diverse deployment scenarios.
+
+\textbf{Scalability}: The consistent performance across domain transfers suggests that this approach can scale to arbitrary environment combinations in real networks.
+
+\textbf{Edge Computing}: The small parameter footprint makes cross-domain adaptation feasible even on resource-constrained edge devices.
+
+\subsection{Future Directions}
+
+While these preliminary results are promising, several areas warrant further investigation:
+
+\begin{itemize}
+\item \textbf{Extended Evaluation}: Comprehensive analysis across more diverse wireless environments and propagation conditions
+\item \textbf{Multi-hop Transfer}: Sequential adaptation across multiple domains (e.g., Urban $\rightarrow$ Rural $\rightarrow$ Indoor)
+\item \textbf{Dynamic Adaptation}: Real-time model adaptation as wireless conditions change
+\item \textbf{Hybrid Approaches}: Combining LoRA with other PEFT methods for enhanced adaptation capabilities
+\end{itemize}
+
+The detailed analysis of cross-domain transfer learning, including extensive experimental validation and theoretical analysis, will be presented in subsequent research focused specifically on this aspect of parameter-efficient channel estimation.

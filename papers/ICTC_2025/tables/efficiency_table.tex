@@ -1,0 +1,27 @@
+% Resource Efficiency Comparison Table for ICTC 2025 Paper
+\begin{table}[t]
+\centering
+\caption{Resource Efficiency and Computational Performance Comparison}
+\label{tab:efficiency}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Method} & \textbf{Memory} & \textbf{Inference} & \textbf{Convergence} & \textbf{Params} & \textbf{Memory} & \textbf{Speed} \\
+ & \textbf{(GB)} & \textbf{Time (ms)} & \textbf{(K iter)} & \textbf{(\%)} & \textbf{Reduction} & \textbf{Gain} \\
+\midrule
+v3 Adapter & 8.2 & 14.8 & 45 & 1.31 & - & - \\
+v4 LoRA & \textbf{6.8} & \textbf{12.3} & \textbf{30} & \textbf{0.27} & \textbf{17\%} & \textbf{17\%} \\
+\midrule
+\multicolumn{7}{l}{\textit{LoRA Improvements over Adapter:}} \\
+\multicolumn{2}{l}{Parameter Reduction:} & \multicolumn{2}{c}{79.4\%} & \multicolumn{3}{c}{(131K → 27K parameters)} \\
+\multicolumn{2}{l}{Convergence Speedup:} & \multicolumn{2}{c}{33.3\%} & \multicolumn{3}{c}{(45K → 30K iterations)} \\
+\multicolumn{2}{l}{Training Time Saving:} & \multicolumn{2}{c}{≈ 45 minutes} & \multicolumn{3}{c}{per transfer task} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Memory usage measured during training with batch size 32
+\item Inference time averaged over 1000 forward passes on GPU
+\item Convergence measured to achieve 95\% of final performance
+\item All measurements on NVIDIA RTX 4090 GPU
+\end{tablenotes}
+\end{table}

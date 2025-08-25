@@ -1,0 +1,78 @@
+\relax 
+\citation{ye2018power}
+\citation{3gpp38901}
+\citation{houlsby2019parameter}
+\citation{hu2021lora}
+\citation{ye2018power}
+\citation{houlsby2019parameter}
+\citation{hu2021lora}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}DNN-based Channel Estimation}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Parameter-Efficient Fine-tuning}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Methodology}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}System Model}{1}{}\protected@file@percent }
+\citation{lee2024nyusim}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Parameter-efficient transfer learning architectures for channel estimation. (a) Adapter architecture inserts bottleneck layers within transformer blocks for parallel adaptation. (b) LoRA decomposes weight updates into low-rank matrices A and B, demonstrating superior parameter efficiency with significantly reduced computational overhead compared to traditional fine-tuning approaches.}}{2}{}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:architecture}{{1}{2}{}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Base Architecture}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Parameter-Efficient Methods}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-C}1}Adapter Architecture}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-C}2}LoRA Architecture}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-D}}Training Configuration}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-D}1}Base Model Training}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-D}2}Training Parameters}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Experimental Setup}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Dataset Configuration}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IV-A}1}Dataset Generation Methodology}{2}{}\protected@file@percent }
+\citation{hu2021lora,houlsby2019parameter}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Implementation Details}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Evaluation Metrics}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Results and Analysis}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Parameter Scaling Analysis}{3}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Parameter Scaling Analysis}}{3}{}\protected@file@percent }
+\newlabel{tab:parameter_scaling}{{I}{3}{}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Performance Comparison}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-B}1}Environment-Specific Transfer Learning Analysis}{3}{}\protected@file@percent }
+\newlabel{fig:adapter_efficient}{{2a}{4}{}{subfigure.2.1}{}}
+\newlabel{sub@fig:adapter_efficient}{{a}{4}{}{subfigure.2.1}{}}
+\newlabel{fig:adapter_scaled}{{2b}{4}{}{subfigure.2.2}{}}
+\newlabel{sub@fig:adapter_scaled}{{b}{4}{}{subfigure.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Adapter transfer learning performance evaluation across different parameter scales in InF and RMa environments. (a) Efficient deployment configuration using 20K parameters optimized for resource-constrained scenarios. (b) Scaled configuration with 131K parameters enabling fair performance comparison with LoRA method while maintaining practical deployment feasibility.}}{4}{}\protected@file@percent }
+\newlabel{fig:adapter_performance}{{2}{4}{}{figure.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Performance and Resource Efficiency Comparison (Scaled Configuration: 1.3\% Parameters)}}{4}{}\protected@file@percent }
+\newlabel{tab:performance}{{II}{4}{}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}Convergence Analysis}{4}{}\protected@file@percent }
+\newlabel{fig:lora_efficient}{{3a}{4}{}{subfigure.3.1}{}}
+\newlabel{sub@fig:lora_efficient}{{a}{4}{}{subfigure.3.1}{}}
+\newlabel{fig:lora_scaled}{{3b}{4}{}{subfigure.3.2}{}}
+\newlabel{sub@fig:lora_scaled}{{b}{4}{}{subfigure.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces LoRA transfer learning performance evaluation demonstrating environment-specific adaptation capabilities. (a) Efficient deployment configuration with 27K parameters showing baseline transfer learning effectiveness. (b) Scaled configuration with 133K parameters revealing superior adaptation performance in challenging rural macro (RMa) scenarios while maintaining minimal improvement in indoor factory (InF) environments due to base model saturation.}}{4}{}\protected@file@percent }
+\newlabel{fig:lora_performance}{{3}{4}{}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-D}}Ablation Studies}{4}{}\protected@file@percent }
+\newlabel{fig:convergence_original}{{4a}{5}{}{subfigure.4.1}{}}
+\newlabel{sub@fig:convergence_original}{{a}{5}{}{subfigure.4.1}{}}
+\newlabel{fig:convergence_updated}{{4b}{5}{}{subfigure.4.2}{}}
+\newlabel{sub@fig:convergence_updated}{{b}{5}{}{subfigure.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Convergence behavior analysis comparing Adapter and LoRA optimization patterns across different experimental configurations. (a) Initial convergence patterns demonstrating method-specific optimization characteristics across various parameter scales. (b) Enhanced model convergence analysis revealing LoRA's superior optimization efficiency with faster convergence rates and more stable training dynamics, particularly evident in challenging rural environments requiring substantial domain adaptation.}}{5}{}\protected@file@percent }
+\newlabel{fig:convergence}{{4}{5}{}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-E}}Cross-Domain Transfer Learning}{5}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Cross-domain transfer learning performance evaluation across four representative environment pairs demonstrating LoRA's adaptability. The results reveal significant performance variations ranging from 1.3 dB (Indoor→Outdoor) to 12.4 dB (Rural→Urban) improvements, highlighting the asymmetric nature of knowledge transfer between different wireless propagation environments and the method's effectiveness in bridging domain gaps.}}{5}{}\protected@file@percent }
+\newlabel{fig:cross_domain}{{5}{5}{}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-E}1}Cross-Domain Experimental Setup}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-E}2}Cross-Domain Results Analysis}{5}{}\protected@file@percent }
+\bibstyle{IEEEtran}
+\bibdata{references}
+\bibcite{ye2018power}{1}
+\bibcite{3gpp38901}{2}
+\bibcite{houlsby2019parameter}{3}
+\bibcite{hu2021lora}{4}
+\bibcite{lee2024nyusim}{5}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Industry Deployment Considerations}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Real-time Requirements}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Edge Device Constraints}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Update Frequency}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{6}{}\protected@file@percent }
+\gdef \@abspage@last{6}

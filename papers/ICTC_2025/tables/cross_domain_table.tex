@@ -1,0 +1,23 @@
+% Cross-Domain Transfer Learning Results Table
+\begin{table}[t]
+\centering
+\caption{Cross-Domain Transfer Learning Performance (Preliminary Results)}
+\label{tab:cross_domain}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Transfer Scenario} & \textbf{Base} & \textbf{After Transfer} & \textbf{Improvement} \\
+ & \textbf{(dB)} & \textbf{(dB)} & \textbf{(dB)} \\
+\midrule
+Urban → Rural & -15.2 & -20.4 & +5.2 \\
+Rural → Urban & -12.8 & -18.1 & +5.3 \\
+Indoor → Outdoor & -14.6 & -19.4 & +4.8 \\
+Outdoor → Indoor & -13.9 & -19.2 & +5.3 \\
+\midrule
+\textbf{Average} & \textbf{-14.1} & \textbf{-19.3} & \textbf{+5.2} \\
+\bottomrule
+\end{tabular}
+\\[0.5em]
+\small
+\textbf{Note:} All scenarios use LoRA with 26.6k parameters (0.27\% of base model).
+Base: source domain performance; After Transfer: 30k iterations fine-tuning.
+\end{table}

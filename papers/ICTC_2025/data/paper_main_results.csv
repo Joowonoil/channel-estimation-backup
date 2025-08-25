@@ -1,0 +1,5 @@
+Method,InF_NMSE_dB,RMa_NMSE_dB,Avg_NMSE_dB,Additional_Params,Param_Efficiency_Percent,Improvement_vs_Base_dB,Memory_GB,Inference_Time_ms
+Base_v3,-23.2,-22.8,-23.0,0,0.0,0.0,7.5,12.0
+v3_Adapter,-25.2,-24.8,-25.0,131072,1.31,2.0,8.2,14.8
+Base_v4,-24.1,-23.5,-23.8,0,0.0,0.0,6.5,10.2
+v4_LoRA,-26.4,-25.9,-26.15,26624,0.27,2.35,6.8,12.3

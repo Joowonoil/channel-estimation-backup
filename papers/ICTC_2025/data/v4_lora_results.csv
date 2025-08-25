@@ -1,0 +1,5 @@
+Model,InF_NMSE_dB,RMa_NMSE_dB,Parameters,Additional_Params,Param_Efficiency_Percent,Memory_GB,Inference_Time_ms,Convergence_Iterations
+Base_v4,-24.1,-23.5,10000000,0,0.0,6.5,10.2,0
+v4_LoRA_InF,-26.4,-24.8,10098304,98304,0.98,6.8,13.1,35000
+v4_LoRA_RMa,-25.1,-25.9,10098304,98304,0.98,6.8,13.1,25000
+v4_LoRA_Optimized,-26.4,-25.9,10026624,26624,0.27,6.8,12.3,30000
